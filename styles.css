@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #12102d;
+  font-family: 'Asap' , sans-serif;
+}
+header{
+  background-color: white;
+  font-size: 30px;
+  padding: 25px 0;
+  text-align: center;
+}
+.scoreboard{
+  border: 4px solid white;
+  border-radius: 6px;
+  box-shadow: 0 0 10px white;
+  margin: 50px auto;
+  width: 300px;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  padding: 15px 20px;
+  position: relative;
+}
+.label{
+  background: #c60011;
+  box-shadow: 0 0 8px #c60011;
+  font-size: 14px;
+  padding: 4px 10px;
+}
+#userlabel{
+  position: absolute;
+  top: 30px;
+  left: -30px;
+}
+#complabel{
+  position: absolute;
+  top: 30px;
+  right: -35px;
+}
+span{
+  text-shadow: 0 0 8px white;
+}
+.result{
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin: 30px 10px;
+}
+.buttons{
+  display: flex;
+  justify-content: center;
+}
+.choices{
+  margin:10px 20px;
+}
+img{
+  width: 140px;
+  height: 140px;
+  border-radius: 40%;
+  box-shadow: 0 0 10px white;
+}
+img:hover{
+  box-shadow: 0 0 10px #0f59ed;
+}
+.bottomtext{
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  margin-top: 20px;
+}
+
+.green-glow{
+  border: 4px solid green;
+  box-shadow: 0 0 15px green;
+  border-radius: 40%;
+}
+.red-glow{
+  border: 4px solid red;
+  box-shadow: 0 0 15px red;
+  border-radius: 40%;
+}
+.grey-glow{
+  border: 4px solid grey;
+  box-shadow: 0 0 15px grey;
+  border-radius: 40%;
+}
+#image-result{
+  display: flex;
+  width: 300px;
+}
