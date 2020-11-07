@@ -23,6 +23,7 @@ function win(user_text, computerscore_text) {
   result_text.innerHTML= "User" + " ( " + user_text + " )" + " WINS to Computer" + " ( " + computerscore_text + " )";
   document.getElementById(user_text).classList.add('green-glow');
   setTimeout(function () {document.getElementById(user_text).classList.remove('green-glow')}, 500);
+  image(user_text, computerscore_text);
 }
 function lose(user_text, computerscore_text) {
   compscore++;
@@ -30,14 +31,16 @@ function lose(user_text, computerscore_text) {
   user_span.innerHTML= userscore;
   result_text.innerHTML= "User" + " ( " + user_text + " )" + " LOSES to Computer" + " ( " + computerscore_text + " )";
   document.getElementById(user_text).classList.add('red-glow');
-  setTimeout(function () {document.getElementById(user_text).classList.remove('red-glow')}, 500);
+  setTimeout(function () {document.getElementById(user_text).classList.remove('red-glow')}, 700);
+  image(user_text, computerscore_text);
 }
 function draw(user_text, computerscore_text) {
   comp_span.innerHTML= compscore;
   user_span.innerHTML= userscore;
   result_text.innerHTML= "User" + " ( " + user_text + " )" + " DRAWS to Computer" + " ( " + computerscore_text + " )";
   document.getElementById(user_text).classList.add('grey-glow');
-  setTimeout(function () {document.getElementById(user_text).classList.remove('grey-glow')}, 500);
+  setTimeout(function () {document.getElementById(user_text).classList.remove('grey-glow')}, 700);
+  image(user_text, computerscore_text);
 }
 
 
@@ -62,15 +65,19 @@ function game(user) {
   }
 }
 
-//function image(user_url) {
-//  console.log(user_url);
-//   document.getElementById('userimage').style.backgroundImage= user_url;
-//}
+function image(iurl, curl) {
+   const user_url=  iurl + '.png';
+   const comp_url=  curl + '.png';
+   document.getElementById("userimage").src = user_url;
+   document.getElementById("compimage").src = comp_url;
+   document.getElementById("userimage").classList.add('afterimage');
+   document.getElementById("compimage").classList.add('afterimage');
+}
+
 
 function Main() {
   rock_div.addEventListener('click', () => {
      game("rock");
-     //image(`"url('rock.png')"`);
   });
   paper_div.addEventListener('click', () => {
      game("paper");

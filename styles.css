@@ -59,7 +59,7 @@ span{
 .choices{
   margin:10px 20px;
 }
-img{
+.choices img{
   width: 140px;
   height: 140px;
   border-radius: 40%;
@@ -90,7 +90,13 @@ img:hover{
   box-shadow: 0 0 15px grey;
   border-radius: 40%;
 }
-#image-result{
+.image-result{
   display: flex;
-  width: 300px;
+  margin: 10px 0;
+  justify-content: center;
+}
+.afterimage{
+  width: 140px;
+  height: 140px;
+  margin: 0 20px;
 }
